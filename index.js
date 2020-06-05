@@ -1,6 +1,6 @@
 'use strict';
 
-// EX:1 node main.js -i jacob -j 45 -k hohoho
+// EX:1 node main.js jacob 45 hohoho
 // for (let j = 0; j < process.argv.length; j++) {
 //     console.log(j + ' -> ' + (process.argv[j]));
 // }
@@ -31,3 +31,12 @@ const args = require('yargs').argv;
 
 console.log('Name: ' + args.name);
 console.log('Age: ' + args.age);
+
+
+const colors = require('colors');
+
+const chosenColor = colors.getRandomColor();
+console.log(`You should use ${chosenColor.name} on your website. It's HTML code is ${chosenColor.code}`);
+
+const favoriteColor = colors.getBlue();
+console.log(`My favorite color is ${favoriteColor.name}/${favoriteColor.code}, btw`);

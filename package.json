@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-parkinglot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "bin": {
+    "hello": "./bin/index.js",
+    "index2": "./bin/index2.js",
+    "index3": "./bin/index3.js",
+    "create_parking_lot": "./bin/create_parking_lot.js",
+    "park": "./bin/park.js",
+    "leave": "./bin/leave.js",
+    "status": "./bin/status.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "boxen": "^4.0.0",
+    "chalk": "^2.4.2",
+    "colors": "file:modules/colors",
+    "minimist": "^1.2.5",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herman98/nodejs-parkinglot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herman98/nodejs-parkinglot/issues"
+  },
+  "homepage": "https://github.com/herman98/nodejs-parkinglot#readme"
+}
