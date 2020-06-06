@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var log = require('../modules/log');
+// var log = require('../modules/log');
 var json_handler = require('../modules/json_handler');
 
 console.log( "CREATE Parking Lot!" );
@@ -29,8 +29,9 @@ json_obj = new json_handler(
 
 json_obj.read();
 
+json_obj.init_json_file();
+
 for (let index = 1; index <= lot_number; index++) {
-    log.info('Allocated slot number: ' + index);
     let new_slot = { 
         "status": false, 
         "slot_no": index,
@@ -40,4 +41,5 @@ for (let index = 1; index <= lot_number; index++) {
 }
 
 json_obj.save();
-json_obj.read();
+
+console.log('Created parking lot with ' + int_lot_number + ' slots');
