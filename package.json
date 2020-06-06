@@ -7,7 +7,8 @@
     "create_parking_lot": "./bin/create_parking_lot.js",
     "park": "./bin/park.js",
     "leave": "./bin/leave.js",
-    "status": "./bin/status.js"
+    "status": "./bin/status.js",
+    "hitory_status": "./bin/hitory_status.js"
   },
   "dependencies": {
     "axios": "^0.19.2",

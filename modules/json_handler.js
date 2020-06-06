@@ -16,6 +16,7 @@ class JSONHandler {
     init(){
         this.json_req = require(this.json_module);  
         // console.log('this.json_req: ', this.json_req);
+        return 0;
     }
     read_async(){
         fs.readFile(this.json_filename, function(err, data) { 
@@ -54,9 +55,6 @@ class JSONHandler {
 
         // console.log("Allocated slot number: " + this.json_object['slot_no']); 
         
-    }
-    remove(object_index) {
-        return object_index;
     }
     find_empty_slot(){
 
@@ -128,6 +126,9 @@ class JSONHandler {
     }
     get_json_data() {
         return this.json_data;
+    }
+    get_length_data() {
+        return this.length;
     }
 
 }

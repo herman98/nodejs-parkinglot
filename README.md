@@ -31,3 +31,7 @@ park KA-09-HH-0987
 park CA-09-IO-1111
 park KA-09-HH-0123
 status
+
+
+*runnint unit test
+npm run test

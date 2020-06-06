@@ -2,6 +2,7 @@
 
 // var log = require('../modules/log');
 var json_handler = require('../modules/json_handler');
+var history_handler = require('../modules/history_handler');
 
 console.log( "CREATE Parking Lot!" );
 
@@ -27,9 +28,14 @@ try {
 json_obj = new json_handler(
     '../fixtures/parking_lot.json', 'fixtures/parking_lot.json');
 
-json_obj.read();
+json_history = new history_handler(
+    '../fixtures/history.json', 'fixtures/history.json');
 
+// json_obj.read();
+
+//init new empty json file
 json_obj.init_json_file();
+json_history.init_json_file();
 
 for (let index = 1; index <= lot_number; index++) {
     let new_slot = { 
