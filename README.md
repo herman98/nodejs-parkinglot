@@ -1,35 +1,31 @@
 #This is nodejs assesment test creating project parkinglot command line using nodejs
 
-//create local module
-mkdir colors
-cd colors
-touch index.js
-npm init -y  //create package.json for local module
+*install nodejs package first before running
 
 
-// create large app project
-sample: nodejs-parkinglot
-
-//create package.json on large app projects
-npm init -y
-
-// register module colors
-npm install --save ./controllers/colors
-
-//uninstall your local module:
-npm un colors
-
-//create the global link by returning to the colors folder and using the link command:
-
-cd modules/colors
-sudo npm link
-
-// Output
-/usr/local/lib/node_modules/colors -> /home/sammy/colors
-
-
-
-#CREATE node command line
+*run with REPL
 node .
+
+*CREATE node command line
 npm install -g .
 npm uninstall -g nodejs-parkinglot
+
+*running code (base on file_input.txt)
+create_parking_lot 6
+park KA-01-HH-1234
+park KA-01-HH-9999
+park KA-01-BB-0001
+park KA-01-HH-7777
+park KA-01-HH-2701
+park KA-01-HH-3141
+leave KA-01-HH-3141 4
+status
+park KA-01-P-333
+park DL-12-AA-9999
+leave KA-01-HH-1234 4
+leave KA-01-BB-0001 6
+leave DL-12-AA-9999 2
+park KA-09-HH-0987
+park CA-09-IO-1111
+park KA-09-HH-0123
+status

@@ -15,7 +15,7 @@ class JSONHandler {
     }
     init(){
         this.json_req = require(this.json_module);  
-        console.log('this.json_req: ', this.json_req);
+        // console.log('this.json_req: ', this.json_req);
     }
     read_async(){
         fs.readFile(this.json_filename, function(err, data) { 
@@ -32,7 +32,7 @@ class JSONHandler {
     read() {
         var data = fs.readFileSync(this.json_filename, 'utf8');
         this.json_data = JSON.parse(data);
-        console.log('this.json_data: ' + JSON.stringify(this.json_data[0])); 
+        // console.log('this.json_data: ' + JSON.stringify(this.json_data[0])); 
     }
     init_json_file(){
         let result = "[]"
@@ -40,7 +40,7 @@ class JSONHandler {
         this.length=0;
 
         this.init();
-        console.log("Init json file success: " + this.json_filename); // Success
+        // console.log("Init json file success: " + this.json_filename); // Success
     }
     push(new_object) {
         this.json_object = new_object;
@@ -67,7 +67,7 @@ class JSONHandler {
 
         var flag_found = false;
         for (let i = 0; i < this.json_data.length; i++) {
-            console.log(this.json_data[i]['status']);
+            // console.log(this.json_data[i]['status']);
             
             if (this.json_data[i]['status'] === false) {
                 flag_found = true;
@@ -84,7 +84,7 @@ class JSONHandler {
     update(id_empty, plat_no, status_new) {
         var index_found = -1;
         for (let i = 0; i < this.json_req.length; i++) {
-            console.log(this.json_req[i]['slot_no']);
+            // console.log(this.json_req[i]['slot_no']);
             
             if (this.json_req[i]['slot_no'] === id_empty) {
                 index_found = i;
@@ -99,15 +99,12 @@ class JSONHandler {
         fs.writeFileSync(this.json_filename, JSON.stringify(this.json_req));
     }
     save() {
-        // console.log('this.json_file: '+ this.json_module)
-        // console.log('this.json_filename: '+ this.json_filename)
-        console.log('this.json_req: ', this.json_req);
-
+        // console.log('this.json_req: ', this.json_req);
         fs.writeFile(this.json_filename, JSON.stringify(this.json_req), err => {
             // Checking for errors 
             if (err)
                 throw err;
-            console.log("Done writing to file: " + this.json_filename); // Success 
+            // console.log("Done writing to file: " + this.json_filename); // Success 
         });
     }
     find_plat_no(plat_no) {
@@ -115,7 +112,7 @@ class JSONHandler {
 
         var flag_found = false;
         for (let i = 0; i < this.json_data.length; i++) {
-            console.log(this.json_data[i]['car_plat_number']);
+            // console.log(this.json_data[i]['car_plat_number']);
             
             if (this.json_data[i]['car_plat_number'] == plat_no) {
                 flag_found = true;
@@ -135,41 +132,4 @@ class JSONHandler {
 
 }
   
-  
-  
-//   JSONHandler.prototype.fetch_all = function() {
-//     var output = {}
-//     for (var k in this.keys) {
-//       output[k] = this.keys[k] 
-//       console.log(this.keys[k])
-//     };
-//     return output;
-//   };
-
-//   JSONHandler.prototype.hasKey = function(key) {
-//     for (var k in this.keys) {
-//       if (key == k) {
-//         return true;
-//       } else {
-//         return false;
-//       }
-//     };
-//     return false;
-//   };
-  
-//   JSONHandler.prototype.remove = function(key) {
-//     if (this.keys[key]) {
-//       delete this.keys[key];
-//       this.length--;
-//     }
-//   };
-  
-//   JSONHandler.prototype.reject = function(callback) {
-//     for (var k in this.keys) {
-//       if (callback(k, this.keys[k])) {
-//         delete this.keys[k];
-//       }
-//     }
-//   };
-  
-  module.exports = JSONHandler;
+module.exports = JSONHandler;

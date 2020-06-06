@@ -19,7 +19,7 @@ json_obj.init();
 
 json_obj.read();
 var json_data = json_obj.get_json_data();
-console.log('json_data: ' + json_data)
+// console.log('json_data: ' + json_data)
 
 console.log("Slot No.\tRegistration No.")
 for (let i = 0; i < json_data.length; i++) {
