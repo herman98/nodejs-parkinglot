@@ -1,12 +1,14 @@
 #This is nodejs assesment test creating project parkinglot command line using nodejs
 
 *install nodejs package first before running
-
+- node version 13.6 (please use nvm for running different nodejs version)
+- install local module first using 
+  $ npm install .
 
 *run with REPL
 node .
 
-*CREATE node command line
+*CREATE global node module
 npm install -g .
 npm uninstall -g nodejs-parkinglot
 
