@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
